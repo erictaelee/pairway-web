@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="44 72 676 170" role="img" aria-label="Pairway">
+  <!-- Wordmark -->
+  <text x="78" y="155"
+        fill="#08745f"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="104"
+        font-weight="700"
+        letter-spacing="-5">Pairway</text>
+
+  <!-- Dashed path -->
+  <line x1="86" y1="208" x2="623" y2="208"
+        stroke="#a84021"
+        stroke-width="9"
+        stroke-linecap="round"
+        stroke-dasharray="3 22"/>
+
+  <!-- Start golf ball -->
+  <circle cx="76" cy="208" r="22" fill="#ffffff" stroke="#08745f" stroke-width="5"/>
+  <g fill="#303436">
+    <circle cx="69" cy="198" r="2.4"/>
+    <circle cx="80" cy="197" r="2.4"/>
+    <circle cx="61" cy="207" r="2.4"/>
+    <circle cx="74" cy="207" r="2.4"/>
+    <circle cx="87" cy="206" r="2.4"/>
+    <circle cx="66" cy="217" r="2.4"/>
+    <circle cx="80" cy="217" r="2.4"/>
+  </g>
+
+  <!-- Midpoint golf ball -->
+  <circle cx="361" cy="208" r="22" fill="#ffffff" stroke="#c97a08" stroke-width="5"/>
+  <g fill="#303436">
+    <circle cx="354" cy="198" r="2.4"/>
+    <circle cx="365" cy="197" r="2.4"/>
+    <circle cx="346" cy="207" r="2.4"/>
+    <circle cx="359" cy="207" r="2.4"/>
+    <circle cx="372" cy="206" r="2.4"/>
+    <circle cx="351" cy="217" r="2.4"/>
+    <circle cx="365" cy="217" r="2.4"/>
+  </g>
+
+  <!-- Flagstick and flag -->
+  <line x1="645" y1="87" x2="645" y2="208"
+        stroke="#08745f" stroke-width="10" stroke-linecap="round"/>
+  <path d="M645 91 L712 116 L645 141 Z" fill="#a84021"/>
+</svg>
