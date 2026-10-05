@@ -196,6 +196,14 @@ async function submitSignup(email: string): Promise<void> {
   }
 }
 
+// "Join the waitlist" buttons scroll to the form; put the cursor in the
+// email field when they arrive so the next step is just typing.
+document.querySelectorAll<HTMLAnchorElement>('a[href="#download"]').forEach((link) => {
+  link.addEventListener("click", () => {
+    window.setTimeout(() => signupInput?.focus({ preventScroll: true }), 500);
+  });
+});
+
 signupForm?.addEventListener("submit", (event) => {
   event.preventDefault();
   if (!signupInput) return;

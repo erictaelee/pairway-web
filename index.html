@@ -6,7 +6,7 @@
     <title>Pairway Golf - Find your perfect playing partner</title>
     <meta
       name="description"
-      content="Pairway Golf matches you with golfers who fit your handicap, pace of play, age, and vibe, so every round is with the right people. Coming soon to iOS and Android."
+      content="Pairway Golf's smart matching pairs you with nearby golfers who fit your game, your pace and your schedule, and who want to play with you too. Coming soon to iOS and Android."
     />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,10 +16,7 @@
       rel="stylesheet"
     />
 
-    <link
-      rel="icon"
-      href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='8'%20fill='%2308745F'/%3E%3Cline%20x1='20'%20y1='7'%20x2='20'%20y2='25'%20stroke='%23FFFFFF'%20stroke-width='2.2'%20stroke-linecap='round'/%3E%3Cpath%20d='M20%208%20L28%2012%20L20%2016%20Z'%20fill='%23E8956B'/%3E%3Ccircle%20cx='10'%20cy='23'%20r='4.5'%20fill='%23FFFFFF'/%3E%3C/svg%3E"
-    />
+    <link rel="icon" type="image/svg+xml" href="/pairway-mark.svg" />
 
     <link rel="stylesheet" href="/src/style.css" />
   </head>
@@ -60,20 +57,21 @@
     <header class="site-header is-over-hero" id="site-header">
       <div class="container header-inner">
         <a href="#top" class="logo" aria-label="Pairway golf, back to top">
-          <img class="logo-lockup logo-dark" src="/pairway-logo.svg" alt="Pairway" />
+          <img class="logo-lockup logo-dark" src="/pairway-logo.svg" alt="Pairway Golf" />
           <img class="logo-lockup logo-light" src="/pairway-logo-light.svg" alt="" aria-hidden="true" />
         </a>
 
         <div class="header-right">
           <nav class="nav-links" id="nav-links" aria-label="Primary">
-            <a href="#mission">Mission</a>
             <a href="#how-it-works">How it works</a>
+            <a href="#smart-matching">Smart matching</a>
+            <a href="#safety">Safety</a>
             <a href="#team">Team</a>
             <a href="#about">About Us</a>
           </nav>
 
           <div class="header-actions">
-            <a href="#download" class="btn btn-primary btn-sm">Get the app</a>
+            <a href="#download" class="btn btn-primary btn-sm">Join the waitlist</a>
             <button
               class="nav-toggle"
               id="nav-toggle"
@@ -99,11 +97,15 @@
             <p class="eyebrow">Golf is better together</p>
             <h1>Find your perfect<br /> playing partner.</h1>
             <p class="hero-sub">
-              Pairway Golf gives you effortless access to a community of golfers
-              who share your pace, vibe, and style of play, making it simple
-              to find the right match, lock in your crew, and build a trusted
-              golf network for every round.
+              Tell Pairway how you play and when you're free. Our smart
+              matching finds nearby golfers who fit your game, and who'd
+              want to play with you too.
             </p>
+
+            <div class="hero-actions">
+              <a href="#download" class="btn btn-primary">Join the waitlist</a>
+              <a href="#how-it-works" class="btn btn-ghost-light">See how it works</a>
+            </div>
 
             <!-- <div class="store-badges">
               <a href="#download" class="store-badge-link" aria-label="Download on the App Store - coming soon">
@@ -117,8 +119,14 @@
             <p class="hero-note">Free to join · Launching on iOS &amp; Android</p>
           </div>
 
+          <!-- A stylised illustration of the app, not a screenshot: keep it
+               loose enough that it doesn't need redrawing every release. -->
           <div class="hero-visual reveal">
-            <div class="phone-frame" role="img" aria-label="Pairway app preview showing an upcoming round and a proposed pairing">
+            <div
+              class="phone-frame"
+              role="img"
+              aria-label="Pairway app preview: a golfer who is free on Saturday morning, ready to like or pass"
+            >
               <div class="phone-notch" aria-hidden="true"></div>
               <div class="phone-screen" aria-hidden="true">
                 <div class="app-status">
@@ -131,57 +139,312 @@
                 </div>
 
                 <div class="app-body">
-                  <div class="app-card">
-                    <p class="app-card-title">Upcoming Rounds</p>
-                    <p class="app-card-sub">Matching golfers at Oakmont · Sat 8:20 AM</p>
-                    <div class="app-chips">
-                      <span class="app-chip"><b>Skill</b>Intermediate</span>
-                      <span class="app-chip"><b>Pace</b>Relaxed</span>
-                      <span class="app-chip"><b>Vibe</b>Social</span>
+                  <div class="app-search">
+                    <span class="app-search-label">You're free</span>
+                    <span class="app-search-value">Sat · 8 AM – 12 PM · within 15 mi</span>
+                  </div>
+
+                  <div class="app-candidate">
+                    <span class="app-pick">Top pick for you</span>
+
+                    <div class="app-candidate-head">
+                      <img class="app-avatar" src="/golfers/sarah.jpg" alt="" />
+                      <div>
+                        <p class="app-golfer-name">Sarah, 34</p>
+                        <p class="app-golfer-sub">6 mi away</p>
+                      </div>
+                    </div>
+
+                    <div class="app-facts">
+                      <span>12 handicap</span>
+                      <span>Relaxed pace</span>
+                    </div>
+
+                    <div class="app-overlap">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="9" />
+                        <path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      <span><b>Free when you are</b> 8:30 – 11:30 AM</span>
+                    </div>
+
+                    <div class="app-actions">
+                      <span class="app-btn app-btn-pass">Pass</span>
+                      <span class="app-btn app-btn-like">Like</span>
                     </div>
                   </div>
 
-                  <p class="app-section-title">Proposed Pairing</p>
-
-                  <div class="app-pairing">
-                    <div class="app-golfer">
-                      <span class="app-avatar">DM</span>
-                      <p class="app-golfer-name">David M.</p>
-                      <ul class="app-golfer-meta">
-                        <li>15–20 HCP</li>
-                        <li>4 hr pace</li>
-                        <li>Social</li>
-                      </ul>
+                  <div class="app-next">
+                    <img class="app-avatar app-avatar-sm" src="/golfers/marcus.jpg" alt="" />
+                    <div>
+                      <p class="app-golfer-name">Marcus, 41</p>
+                      <p class="app-golfer-sub">9 mi away · Free 9 – 11 AM</p>
                     </div>
-
-                    <span class="app-vs">vs</span>
-
-                    <div class="app-golfer">
-                      <span class="app-avatar app-avatar-alt">SL</span>
-                      <p class="app-golfer-name">Sarah L.</p>
-                      <ul class="app-golfer-meta">
-                        <li>15–20 HCP</li>
-                        <li>4 hr pace</li>
-                        <li>Local</li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div class="app-match">
-                    <span class="app-match-bar"><span></span></span>
-                    <span class="app-match-label">94% match</span>
                   </div>
 
                   <div class="app-more">
                     <span class="app-more-avatars"><span></span><span></span><span></span></span>
-                    <span class="app-more-label">6 more golfers matching nearby</span>
+                    <span class="app-more-label">2 more golfers free Saturday</span>
                   </div>
-
-                  <div class="app-cta">Confirm pairing</div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <!-- HOW IT WORKS -->
+      <section class="how-it-works" id="how-it-works">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">How it works</p>
+            <h2>From a free morning to the first tee.</h2>
+          </div>
+
+          <!-- Each phone is an HTML recreation of the real app screen. To use a
+               real capture instead, replace the contents of .phone-screen with
+               <img class="screen-shot" src="/screens/<name>.png" alt="" />
+               (1179 x 2556 iPhone captures fit the frame). -->
+          <ol class="steps">
+            <li class="step reveal">
+              <div class="phone-frame phone-sm" aria-hidden="true">
+                <div class="phone-screen scr">
+                  <div class="scr-status"><span>9:41</span><span class="app-status-icons"><i></i><i></i><i></i></span></div>
+                  <p class="scr-title">Who you want to play with</p>
+                  <div class="scr-body">
+                    <p class="scr-note">Gender and age decide who you see. Everything else shifts the order.</p>
+                    <p class="scr-label">Age</p>
+                    <div class="scr-chips"><span>18 to 29</span><span class="on">30 to 39</span><span class="on">40 and over</span></div>
+                    <p class="scr-label">Their handicap</p>
+                    <div class="scr-chips"><span>Scratch to 9</span><span class="on">10 to 19</span><span>20 and up</span></div>
+                    <p class="scr-label">Their pace</p>
+                    <div class="scr-chips"><span>Fast</span><span class="on">Relaxed</span><span>No preference</span></div>
+                    <p class="scr-label">Within</p>
+                    <div class="scr-chips"><span>10 mi</span><span class="on">25 mi</span><span>50 mi</span></div>
+                    <span class="scr-cta">Save</span>
+                  </div>
+                </div>
+              </div>
+              <span class="step-number">01</span>
+              <h3>Tell us how you play</h3>
+              <p>
+                Your handicap, your pace, and the kind of golfer you'd like
+                to play with.
+              </p>
+            </li>
+            <li class="step reveal">
+              <div class="phone-frame phone-sm" aria-hidden="true">
+                <div class="phone-screen scr">
+                  <div class="scr-status"><span>9:41</span><span class="app-status-icons"><i></i><i></i><i></i></span></div>
+                  <p class="scr-title">Find a game</p>
+                  <div class="scr-body">
+                    <p class="scr-label">Day</p>
+                    <div class="scr-chips"><span>Thu, Oct 8</span><span>Fri, Oct 9</span><span class="on">Sat, Oct 10</span><span>Sun, Oct 11</span></div>
+                    <p class="scr-label">Earliest tee off</p>
+                    <div class="scr-chips"><span>06:00</span><span class="on">07:00</span><span>08:00</span><span>09:00</span></div>
+                    <p class="scr-label">Latest tee off</p>
+                    <div class="scr-chips"><span>10:00</span><span class="on">11:00</span><span>12:00</span><span>13:00</span></div>
+                    <span class="scr-cta">Find golfers</span>
+                  </div>
+                  <div class="scr-tabs"><span class="on">Find a game</span><span>Matches</span><span>You</span></div>
+                </div>
+              </div>
+              <span class="step-number">02</span>
+              <h3>Post when you're free</h3>
+              <p>
+                Pick a day and a tee-time window. You'll only see golfers
+                who are free at the same time.
+              </p>
+            </li>
+            <li class="step reveal">
+              <div class="phone-frame phone-sm" aria-hidden="true">
+                <div class="phone-screen scr scr-dark">
+                  <div class="scr-status"><span>9:41</span><span class="app-status-icons"><i></i><i></i><i></i></span></div>
+                  <div class="scr-match">
+                    <p class="scr-match-eyebrow">It's a match</p>
+                    <span class="scr-match-photo"><img src="/golfers/sarah.jpg" alt="" /></span>
+                    <p class="scr-match-title">You and Sarah both want to play.</p>
+                    <p class="scr-match-sub">Say hello and sort out a tee time.</p>
+                  </div>
+                  <div class="scr-match-actions">
+                    <span class="scr-cta scr-cta-volt">Say hello</span>
+                    <span class="scr-link">Keep looking</span>
+                  </div>
+                </div>
+              </div>
+              <span class="step-number">03</span>
+              <h3>Like who fits</h3>
+              <p>
+                Browse your smart matches nearby, best fit first. When you
+                both say yes, a chat opens.
+              </p>
+            </li>
+            <li class="step reveal">
+              <div class="phone-frame phone-sm" aria-hidden="true">
+                <div class="phone-screen scr">
+                  <div class="scr-status"><span>9:41</span><span class="app-status-icons"><i></i><i></i><i></i></span></div>
+                  <div class="scr-chat-head">
+                    <img src="/golfers/sarah.jpg" alt="" />
+                    <span>Sarah</span>
+                  </div>
+                  <div class="scr-body">
+                    <div class="scr-round">
+                      <p class="scr-round-label">Your round</p>
+                      <p class="scr-round-course">&check; Maple Ridge Golf Club</p>
+                      <p class="scr-round-when">Sat, Oct 10 · 8:30 AM · confirmed</p>
+                    </div>
+                    <div class="scr-thread">
+                      <span class="scr-msg">Saturday morning work for you?</span>
+                      <span class="scr-msg scr-msg-me">Perfect. Sent you 8:30 at Maple Ridge</span>
+                      <span class="scr-msg">Confirmed. See you on the first tee!</span>
+                    </div>
+                  </div>
+                  <div class="scr-input"><span>Message</span></div>
+                </div>
+              </div>
+              <span class="step-number">04</span>
+              <h3>Tee it up</h3>
+              <p>
+                Pick a course and a tee time together, then meet on the
+                first tee.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- SMART MATCHING -->
+      <section class="features" id="smart-matching">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Smart matching</p>
+            <h2>Matches that work both ways.</h2>
+            <p>
+              Pairway doesn't just show you everyone nearby. It finds the
+              golfers you'd enjoy playing with, who'd enjoy playing with you
+              too, and puts the best fit first.
+            </p>
+          </div>
+
+          <div class="feature-grid">
+            <div class="feature-card reveal">
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M7 7h11l-3-3M17 17H6l3 3" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <h3>It has to fit you both</h3>
+              <p>
+                Your game is checked against what they're looking for, and
+                theirs against yours. A match only counts if it works for
+                both of you.
+              </p>
+            </div>
+
+            <div class="feature-card reveal">
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <rect x="3" y="5" width="18" height="16" rx="2" />
+                  <path d="M3 10h18M8 3v4M16 3v4" stroke-linecap="round" />
+                </svg>
+              </span>
+              <h3>Free when you are</h3>
+              <p>
+                Only golfers whose free time overlaps yours make the list,
+                so every match is a round you can actually play.
+              </p>
+            </div>
+
+            <div class="feature-card reveal">
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M4 6h10M4 12h7M4 18h4" stroke-linecap="round" />
+                  <path d="M17 5v14M14 16l3 3 3-3" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <h3>Ranked, not ruled out</h3>
+              <p>
+                Your must-haves are respected. Everything else, like pace
+                and handicap, shapes the order, so a great partner who
+                differs on one thing still makes your list.
+              </p>
+            </div>
+          </div>
+
+          <div class="match-factors reveal">
+            <p class="match-factors-title">What we look at</p>
+            <ul class="match-factors-list">
+              <li>Skill level</li>
+              <li>Pace of play</li>
+              <li>When you're free</li>
+              <li>Distance</li>
+              <li>Age range</li>
+              <li>Who you'd like to play with</li>
+              <li>Drinking on the course</li>
+              <li>Smoking on the course</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SAFETY -->
+      <section class="safety" id="safety">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Safe by design</p>
+            <h2>Play with people you can trust.</h2>
+          </div>
+
+          <ul class="safety-grid">
+            <li class="safety-item reveal">
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z" stroke-linejoin="round" />
+                  <path d="m9 12 2 2 4-4" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <div>
+                <h3>Chat only when you both say yes</h3>
+                <p>No one can message you unless you've liked each other.</p>
+              </div>
+            </li>
+            <li class="safety-item reveal">
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z" stroke-linejoin="round" />
+                  <circle cx="12" cy="9.5" r="2.4" />
+                </svg>
+              </span>
+              <div>
+                <h3>Your details stay private</h3>
+                <p>Golfers see your first name and roughly how far away you are, never where you live.</p>
+              </div>
+            </li>
+            <li class="safety-item reveal">
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M12 3 5 6v5c0 4.4 3 8.3 7 10 4-1.7 7-5.6 7-10V6l-7-3Z" stroke-linejoin="round" />
+                  <path d="M10 10h1.5v5M14 10v5" stroke-linecap="round" />
+                </svg>
+              </span>
+              <div>
+                <h3>Adults only</h3>
+                <p>Pairway is for golfers 18 and over.</p>
+              </div>
+            </li>
+            <li class="safety-item reveal">
+              <span class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="m5.6 5.6 12.8 12.8" stroke-linecap="round" />
+                </svg>
+              </span>
+              <div>
+                <h3>Block or report anytime</h3>
+                <p>Unmatch, block or report anyone in a couple of taps.</p>
+              </div>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -198,10 +461,10 @@
               Golf is a social game, but finding people who match your pace,
               skill level, and schedule is still mostly luck. A friend of a
               friend, a lucky pairing at the club, a post in a Facebook
-              group. We built Pairway Golf to make that connection using AI.
-              Tell us how you play and who you'd like to play with, and
-              we'll do the matching, so every tee time starts with a group
-              that actually fits.
+              group. We built Pairway Golf to make that connection on
+              purpose. Tell us how you play and when you're free, and our
+              smart matching does the rest, so every tee time starts with a
+              partner who actually fits.
             </p>
 
             <div class="mission-stats reveal">
@@ -211,138 +474,12 @@
               </div>
               <div class="stat">
                 <span class="stat-value">18</span>
-                <span class="stat-label">holes better with the right group</span>
+                <span class="stat-label">holes better with the right partner</span>
               </div>
               <div class="stat">
                 <span class="stat-value">2026</span>
                 <span class="stat-label">launching on iOS &amp; Android</span>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- HOW IT WORKS -->
-      <section class="how-it-works" id="how-it-works">
-        <div class="container">
-          <div class="section-heading reveal">
-            <p class="eyebrow">How it works</p>
-            <h2>Matched in four simple steps.</h2>
-          </div>
-
-          <ol class="steps">
-            <li class="step reveal">
-              <span class="step-number">01</span>
-              <h3>Build your golfer profile</h3>
-              <p>
-                Share your handicap, home course, and a bit about how you
-                like to play. Casual weekend rounds or competitive stroke
-                play.
-              </p>
-            </li>
-            <li class="step reveal">
-              <span class="step-number">02</span>
-              <h3>Set your preferences</h3>
-              <p>
-                Dial in what matters to you: pace of play, age range,
-                availability, and the kind of playing partner you're looking
-                for.
-              </p>
-            </li>
-            <li class="step reveal">
-              <span class="step-number">03</span>
-              <h3>Get matched</h3>
-              <p>
-                Pairway Golf's AI engine analyzes your pace, vibe, and schedule
-                to surface nearby golfers you'll genuinely click with. Browse 
-                personalized recommendations, connect with confidence, and start 
-                building your crew.
-              </p>
-            </li>
-            <li class="step reveal">
-              <span class="step-number">04</span>
-              <h3>Meet on the course</h3>
-              <p>
-                Chat, lock in a tee time, and head out for a round with a
-                group that actually fits your game.
-              </p>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <!-- FEATURES / MATCHING CRITERIA -->
-      <section class="features" id="features">
-        <div class="container">
-          <div class="section-heading reveal">
-            <p class="eyebrow">Smarter pairings</p>
-            <h2>Matched on what actually matters.</h2>
-          </div>
-
-          <div class="feature-grid">
-            <div class="feature-card reveal">
-              <span class="feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                  <path d="M4 21V4M4 4l12 3-4 4 4 3-12 3" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </span>
-              <h3>Handicap</h3>
-              <p>Play against golfers at a similar skill level, or find the challenge you're looking for.</p>
-            </div>
-
-            <div class="feature-card reveal">
-              <span class="feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                  <circle cx="12" cy="12" r="9" />
-                  <path d="M12 7v5l3 3" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </span>
-              <h3>Pace of play</h3>
-              <p>Quick nine before work or an unhurried Saturday round. Match with people who play at your speed.</p>
-            </div>
-
-            <div class="feature-card reveal">
-              <span class="feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                  <circle cx="9" cy="8" r="3" />
-                  <circle cx="17" cy="9" r="2.5" />
-                  <path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15.5 14.5c2.5.3 4.5 2.4 4.5 5" stroke-linecap="round" />
-                </svg>
-              </span>
-              <h3>Age range</h3>
-              <p>Set the age range you're most comfortable playing with, from weekend regulars to lifelong members.</p>
-            </div>
-
-            <div class="feature-card reveal">
-              <span class="feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                  <rect x="3" y="5" width="18" height="16" rx="2" />
-                  <path d="M3 10h18M8 3v4M16 3v4" stroke-linecap="round" />
-                </svg>
-              </span>
-              <h3>Availability</h3>
-              <p>Tell us when you usually play and get matched with golfers who are free at the same time.</p>
-            </div>
-
-            <div class="feature-card reveal">
-              <span class="feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                  <path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z" stroke-linejoin="round" />
-                  <circle cx="12" cy="9.5" r="2.4" />
-                </svg>
-              </span>
-              <h3>Home course</h3>
-              <p>Find golfers near your home course, or connect before you travel to a new one.</p>
-            </div>
-
-            <div class="feature-card reveal">
-              <span class="feature-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                  <path d="M20.8 8.6c0 5-8.8 10.4-8.8 10.4S3.2 13.6 3.2 8.6a4.6 4.6 0 0 1 8.8-1.8 4.6 4.6 0 0 1 8.8 1.8Z" stroke-linejoin="round" />
-                </svg>
-              </span>
-              <h3>Playing style</h3>
-              <p>From competitive stroke play to relaxed scrambles. Find people who play the game the way you do.</p>
             </div>
           </div>
         </div>
@@ -354,6 +491,7 @@
           <div class="section-heading reveal">
             <p class="eyebrow">Our team</p>
             <h2>Golfers building for golfers.</h2>
+            <p>Three different games. We'd still match.</p>
           </div>
 
           <div class="team-grid">
@@ -364,6 +502,12 @@
               </div>
               <h3>Eddie Kim</h3>
               <p class="team-role">CEO &amp; Founder</p>
+              <ul class="team-game" aria-label="Golf profile">
+                <li><b>15</b> handicap</li>
+                <li>Relaxed pace</li>
+                <li>Drinks on course</li>
+                <li>Smokes on course</li>
+              </ul>
             </div>
 
             <div class="team-card reveal">
@@ -372,7 +516,13 @@
                 <span class="avatar-initials" aria-hidden="true">EL</span>
               </div>
               <h3>Eric Lee</h3>
-              <p class="team-role">CTO</p>
+              <p class="team-role">CTO &amp; Co-Founder</p>
+              <ul class="team-game" aria-label="Golf profile">
+                <li><b>21</b> handicap</li>
+                <li>Fast pace</li>
+                <li>Drinks on course</li>
+                <li>Non-smoker</li>
+              </ul>
             </div>
 
             <div class="team-card reveal">
@@ -381,7 +531,13 @@
                 <span class="avatar-initials" aria-hidden="true">KS</span>
               </div>
               <h3>Kenneth Such</h3>
-              <p class="team-role">Director of Finance &amp; Operations</p>
+              <p class="team-role">Head of Ops, Finance &amp; Marketing</p>
+              <ul class="team-game" aria-label="Golf profile">
+                <li><b>3</b> handicap</li>
+                <li>Relaxed pace</li>
+                <li>Drinks on course</li>
+                <li>Smokes on course</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -410,8 +566,8 @@
               round: skill level, pace, and personality.
             </p>
             <p>
-              We're a small team of golfers and builders working and leveraging
-              AI to bring that idea to life, starting with the Pairway moblie app.
+              We're a small team of golfers and builders bringing that idea
+              to life, starting with the Pairway mobile app.
             </p>
           </div>
         </div>
@@ -420,8 +576,8 @@
       <!-- DOWNLOAD CTA -->
       <section class="download-cta" id="download">
         <div class="container download-inner reveal">
-          <h2>Ready to find your next foursome?</h2>
-          <p>Pairway Golf is launching soon on iOS and Android. Get notified the moment it's live.</p>
+          <h2>Ready to find your next playing partner?</h2>
+          <p>Pairway Golf launches soon on iOS and Android. Join the waitlist and we'll email you the day it's live.</p>
 
           <form class="signup-form" id="signup-form" novalidate>
             <label class="sr-only" for="signup-email">Email address</label>
@@ -434,7 +590,7 @@
               autocomplete="email"
               required
             />
-            <button type="submit" id="signup-button" class="btn btn-primary signup-btn">Keep me posted</button>
+            <button type="submit" id="signup-button" class="btn btn-primary signup-btn">Join the waitlist</button>
 
             <!-- Honeypot: hidden from people, filled by bots. -->
             <input
@@ -471,14 +627,16 @@
       <div class="container footer-inner">
         <div class="footer-brand">
           <a href="#top" class="logo" aria-label="Pairway golf, back to top">
-            <img class="logo-lockup" src="/pairway-logo-light.svg" alt="Pairway" />
+            <img class="logo-lockup" src="/pairway-logo-light.svg" alt="Pairway Golf" />
           </a>
-          <p>Golf, better together.</p>
+          <p>Golf is better together.</p>
         </div>
 
         <nav class="footer-links" aria-label="Footer">
-          <a href="#mission">Mission</a>
           <a href="#how-it-works">How it works</a>
+          <a href="#smart-matching">Smart matching</a>
+          <a href="#safety">Safety</a>
+          <a href="#mission">Mission</a>
           <a href="#team">Team</a>
           <a href="#about">About Us</a>
         </nav>
